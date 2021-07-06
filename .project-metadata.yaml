@@ -10,6 +10,11 @@ engine_images:
     tags:
       - 14
 
+runtimes:
+  - editor: Workbench
+    kernel: Python 3.6
+    edition: Standard
+
 tasks:
   - type: run_session
     name: Install Dependencies
@@ -19,6 +24,7 @@ tasks:
     cpu: 2
 
   - type: start_application
+    name: Launch Tensorboard
     subdomain: tensorboard
     script: cml/launch_tensorboard.py
     kernel: python3
@@ -29,14 +35,3 @@ tasks:
     kernel: python3
     memory: 4
     cpu: 2
-
-  # - type: create_job
-  #   name: Create Train Job
-  #   entity_label: train
-  #   script: load_and_train.py
-  #   short_summary: Load data and train basic Tensorflow model while saving logs
-  #   kernel: python3
-
-  # - type: run_job
-  #   entity_label: train
-  #   short_summary: Running the job to load data and train basic Tensorflow model while saving logs
