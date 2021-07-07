@@ -1,6 +1,6 @@
 # Tensorboard as a CML Application
 
-![https://www.tensorflow.org/tensorboard](images/tensorboard.gif)
+[![Tensorboard](images/tensorboard.gif)](https://www.tensorflow.org/tensorboard)
 
 This repository demonstrates a minimal example of running [Tensorboard](https://www.tensorflow.org/tensorboard) as an [Application](https://docs.cloudera.com/machine-learning/cloud/applications/topics/ml-applications.html) on CML by visualizing the training of a simple neural network on the MNIST digits dataset. The example used in this repo has been adapted from [this notebook](https://github.com/tensorflow/tensorboard/blob/master/docs/get_started.ipynb[).
 
