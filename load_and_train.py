@@ -42,7 +42,7 @@ import tensorflow as tf
 import datetime
 import matplotlib.pyplot as plt
 
-# NOTE - the following example is adapted from the official Tensorboard "Getting Started" docs
+# NOTE - the following example is adapted from the official TensorBoard "Getting Started" docs
 # https://github.com/tensorflow/tensorboard/blob/master/docs/get_started.ipynb 
 
 # Load the MNIST digits dataset from Keras
