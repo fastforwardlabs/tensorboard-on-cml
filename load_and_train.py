@@ -23,10 +23,8 @@ for i in range(9):
 def create_model():
   return tf.keras.models.Sequential([
     tf.keras.layers.Flatten(input_shape=(28, 28)),
-    tf.keras.layers.Dense(512, activation='relu'),
-    tf.keras.layers.Dropout(0.2),
-    tf.keras.layers.Dense(10, activation='softmax')
-  ])
+    tf.keras.layers.Dense(512, activation='relu', kernel_regularizer=tf.keras.regularizers.l2(l2=0.0001)),
+    tf.keras.layers.Dropout(0.2), tf.keras.layers.Dense(10, activation='softmax')])
 
 # Create and fit a model by specifying the `tf.keras.callbacks.Tensorboard` Callback to ensure
 # logs are stored to capture information about the training run
@@ -40,7 +38,7 @@ tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram
 
 model.fit(x=x_train, 
           y=y_train, 
-          epochs=20, 
+          epochs=40, 
           validation_data=(x_test, y_test), 
           callbacks=[tensorboard_callback])
 
