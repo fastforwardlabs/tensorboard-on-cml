@@ -28,6 +28,8 @@ tasks:
     subdomain: tensorboard
     script: cml/launch_tensorboard.py
     kernel: python3
+    memory: 1
+    cpu: 1
 
   - type: run_session
     name: Train Model
