@@ -8,7 +8,7 @@ date: "2021-07-06"
 engine_images:
   - image_name: engine
     tags:
-      - 14
+      - 14-cml-2021.05-1
 
 runtimes:
   - editor: Workbench
